@@ -113,25 +113,19 @@ operationButtons.forEach(button => {
     })
 });
 
-equalsButton.forEach(button => {
-    button.addEventListener('click', () => {
-        calculator.compute();
-        calculator.updateDisplay();
-    })
+equalsButton.addEventListener('click', button => {
+    calculator.compute();
+    calculator.updateDisplay();
 });
 
-allClearButton.forEach(button => {
-    button.addEventListener('click', () => {
-        calculator.clear();
-        calculator.updateDisplay();
-    })
+allClearButton.addEventListener('click', button => {
+    calculator.clear();
+    calculator.updateDisplay();
 });
 
-deleteButton.forEach(button => {
-    button.addEventListener('click', () => {
-        calculator.delete();
-        calculator.updateDisplay();
-    })
-})
+deleteButton.addEventListener('click', button => {
+    calculator.delete();
+    calculator.updateDisplay();
+});
 
 // document.addEventListener('keypress', (e) => { console.log(e) })
