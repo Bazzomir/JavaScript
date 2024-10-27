@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <main class="calculator">
+        <section class="calculator-container">
+            <div class="calculator__box">
+                <div class="box__screen">
+                    <div data-previous-operand class="screen__previous-operand"></div>
+                    <div data-current-operand class="screen__current-operand"></div>
+                    <!-- <input type="number" data-current-operand class="screen__current-operand--input"/> -->
+                </div>
+                <div class="box__buttons">
+                    <button data-all-clear class="doubleButton--left">RESET</button>
+                    <button data-delete class="operationButtonDel">DEL</button>
+                    <button data-operation class="operationButton">÷</button>
+                    <button data-number class="numberButton">7</button>
+                    <button data-number class="numberButton">8</button>
+                    <button data-number class="numberButton">9</button>
+                    <button data-operation class="operationButton">×</button>
+                    <button data-number class="numberButton">4</button>
+                    <button data-number class="numberButton">5</button>
+                    <button data-number class="numberButton">6</button>
+                    <button data-operation class="operationButton">-</button>
+                    <button data-number class="numberButton">1</button>
+                    <button data-number class="numberButton">2</button>
+                    <button data-number class="numberButton">3</button>
+                    <button data-operation class="operationButton">+</button>
+                    <button data-number class="numberButton">0</button>
+                    <button data-number class="numberButton">.</button>
+                    <button data-equals class="doubleButton--right">=</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script type="text/javascript" src="./calculator.js"></script>
+
+</html>
