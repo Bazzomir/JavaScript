@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -16,34 +16,35 @@
         <section class="calculator-container">
             <div class="calculator__box">
                 <div class="box__screen">
-                    <div data-previous-operand class="screen__previous-operand"></div>
-                    <div data-current-operand class="screen__current-operand"></div>
-                    <!-- <input type="number" data-current-operand class="screen__current-operand--input"/> -->
+                    <div data-previous-operand class="screen__previous-operand" aria-label="Previous Operand"></div>
+                    <div data-current-operand class="screen__current-operand" aria-label="Current Operand"></div>
                 </div>
                 <div class="box__buttons">
-                    <button data-all-clear class="doubleButton--left">RESET</button>
-                    <button data-delete class="operationButtonDel">DEL</button>
-                    <button data-operation class="operationButton">÷</button>
-                    <button data-number class="numberButton">7</button>
-                    <button data-number class="numberButton">8</button>
-                    <button data-number class="numberButton">9</button>
-                    <button data-operation class="operationButton">×</button>
-                    <button data-number class="numberButton">4</button>
-                    <button data-number class="numberButton">5</button>
-                    <button data-number class="numberButton">6</button>
-                    <button data-operation class="operationButton">-</button>
-                    <button data-number class="numberButton">1</button>
-                    <button data-number class="numberButton">2</button>
-                    <button data-number class="numberButton">3</button>
-                    <button data-operation class="operationButton">+</button>
-                    <button data-number class="numberButton">0</button>
-                    <button data-number class="numberButton">.</button>
-                    <button data-equals class="doubleButton--right">=</button>
+                    <button data-all-clear class="doubleButton--left" aria-label="Clear">RESET</button>
+                    <button data-delete class="operationButtonDel" aria-label="Delete last entry">DEL</button>
+                    <button data-operation class="operationButton" aria-label="Divide">÷</button>
+                    <button data-number class="numberButton" aria-label="7">7</button>
+                    <button data-number class="numberButton" aria-label="8">8</button>
+                    <button data-number class="numberButton" aria-label="9">9</button>
+                    <button data-operation class="operationButton" aria-label="Multiply">×</button>
+                    <button data-number class="numberButton" aria-label="4">4</button>
+                    <button data-number class="numberButton" aria-label="5">5</button>
+                    <button data-number class="numberButton" aria-label="6">6</button>
+                    <button data-operation class="operationButton" aria-label="Subtract">-</button>
+                    <button data-number class="numberButton" aria-label="1">1</button>
+                    <button data-number class="numberButton" aria-label="2">2</button>
+                    <button data-number class="numberButton" aria-label="3">3</button>
+                    <button data-operation class="operationButton" aria-label="Add">+</button>
+                    <button data-number class="numberButton" aria-label="0">0</button>
+                    <button data-number class="numberButton" aria-label="Decimal">.</button>
+                    <button data-equals class="doubleButton--right" aria-label="Equals">=</button>
                 </div>
             </div>
         </section>
     </main>
+
+    <script type="text/javascript" src="./calculator.js"></script>
+
 </body>
-<script type="text/javascript" src="./calculator.js"></script>
 
 </html>
