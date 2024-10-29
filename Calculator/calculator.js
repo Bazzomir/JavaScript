@@ -42,7 +42,8 @@ class Calculator {
         let computation;
         const prev = parseFloat(this.previousOperand);
         const current = parseFloat(this.currentOperand);
-        if (isNaN(prev) || isNaN(current)) return;
+        if (isNaN(prev) || (isNaN(current) && !['sin', 'cos', 'tan', 'cot', 'sqrt', 'log', 'exp', 'pi', 'e'].includes(this.operation))) return;
+
         switch (this.operation) {
             case '+':
                 computation = prev + current;
@@ -55,6 +56,33 @@ class Calculator {
                 break;
             case '÷':
                 computation = prev / current;
+                break;
+            case 'sin':
+                computation = Math.sin(current * (Math.PI / 180));
+                break;
+            case 'cos':
+                computation = Math.cos(current * (Math.PI / 180));
+                break;
+            case 'tan':
+                computation = Math.tan(current * (Math.PI / 180));
+                break;
+            case 'cot':
+                computation = 1 / Math.tan(current * (Math.PI / 180));
+                break;
+            case 'sqrt':
+                computation = Math.sqrt(current);
+                break;
+            case 'log':
+                computation = Math.log10(current);
+                break;
+            case 'exp':
+                computation = Math.exp(current);
+                break;
+            case 'pi':
+                computation = Math.PI;
+                break;
+            case 'e':
+                computation = Math.E;
                 break;
             default:
                 return;
@@ -91,6 +119,12 @@ class Calculator {
             this.previousOperandTextElement.innerText = '';
         }
     }
+
+    handleScientificFunction(func) {
+        this.chooseOperation(func);
+        this.compute();
+        this.updateDisplay();
+    }
 }
 
 // Selectors
@@ -99,6 +133,7 @@ const operationButtons = document.querySelectorAll('[data-operation]');
 const equalsButton = document.querySelector('[data-equals]');
 const deleteButton = document.querySelector('[data-delete]');
 const allClearButton = document.querySelector('[data-all-clear]');
+const scientificButtons = document.querySelectorAll('[data-function]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
@@ -131,6 +166,10 @@ function handleOperationInput(operation) {
     calculator.updateDisplay();
 }
 
+function handleScientificInput(func) {
+    calculator.handleScientificFunction(func);
+}
+
 // Button Event Listeners
 numberButtons.forEach(button => {
     button.addEventListener('click', () => handleNumberInput(button.innerText));
@@ -138,6 +177,10 @@ numberButtons.forEach(button => {
 
 operationButtons.forEach(button => {
     button.addEventListener('click', () => handleOperationInput(button.innerText));
+});
+
+scientificButtons.forEach(button => {
+    button.addEventListener('click', () => handleScientificInput(button.getAttribute('aria-label')));
 });
 
 equalsButton.addEventListener('click', handleEquals);
@@ -173,12 +216,35 @@ document.addEventListener('keydown', (e) => {
                 break;
         }
         handleOperationInput(operation);
+    } else if (e.key === '^') {
+        handleOperationInput('^');
+    } else if (e.key === '%') {
+        handleOperationInput('%');
+    } else if (e.key === '!') {
+        calculator.handleScientificFunction('factorial');
+    } else if (e.key === 'e' || e.key === 'E') {
+        calculator.handleScientificFunction('e');
+    } else if (e.key === '(') {
+        handleNumberInput('(');
+    } else if (e.key === ')') {
+        handleNumberInput(')');
     }
 });
 
+// Scientific toggle button listener
 const switchInput = document.querySelector('.box__switch input[type="checkbox"]');
-const scientificButtons = document.querySelector('.box__buttons--scientific');
+const scientificContainer = document.querySelector('.box__buttons--scientific');
+const calculatorBox = document.querySelector('.calculator__box');
 
-switchInput.addEventListener('change', () => {
-    scientificButtons.classList.toggle('active', switchInput.checked);
-});
+function toggleScientificMode() {
+    scientificContainer.classList.toggle('active', switchInput.checked);
+
+    if (switchInput.checked) {
+        calculatorBox.style.width = '700px';
+    } else {
+        calculatorBox.style.width = '366px';
+    }
+}
+
+switchInput.addEventListener('change', toggleScientificMode);
+
