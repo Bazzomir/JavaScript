@@ -161,9 +161,26 @@
     font-size: 17px;
 }
 
-.functionButton .doubleButton--left_first {
-    grid-column: 3/3;
-    
+.font-17{
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.font-20{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.invisable {
+    background-color: transparent;
+    box-shadow: 0px 0px 0px 0px rgba(88, 88, 88, 0) !important;
+}
+
+.functionButton.doubleButton--right_first {
+    border-radius: 50px;
+    background-color: #72c1e8;
+    color: #353535;
+    font-size: 20px;
 }
 
 .doubleButton--left {
@@ -171,7 +188,7 @@
     border-radius: 50px;
     background-color: #0f6c94;
     color: #e8ead6;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .doubleButton--right {
