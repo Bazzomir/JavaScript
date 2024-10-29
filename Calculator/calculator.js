@@ -175,3 +175,10 @@ document.addEventListener('keydown', (e) => {
         handleOperationInput(operation);
     }
 });
+
+const switchInput = document.querySelector('.box__switch input[type="checkbox"]');
+const scientificButtons = document.querySelector('.box__buttons--scientific');
+
+switchInput.addEventListener('change', () => {
+    scientificButtons.classList.toggle('active', switchInput.checked);
+});
