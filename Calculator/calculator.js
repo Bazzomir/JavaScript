@@ -2,6 +2,7 @@ class Calculator {
     constructor(previousOperandTextElement, currentOperandTextElement) {
         this.previousOperandTextElement = previousOperandTextElement;
         this.currentOperandTextElement = currentOperandTextElement;
+        this.isLocked = false;
         this.clear();
     }
 
@@ -16,6 +17,7 @@ class Calculator {
     }
 
     appendNumber(number) {
+        if(this.isLocked) return;
         if (number === '.' && this.currentOperand.includes('.')) return;
         this.currentOperand = this.currentOperand.toString() + number.toString();
     }
@@ -144,6 +146,7 @@ const calculator = new Calculator(previousOperandTextElement, currentOperandText
 function handleClear() {
     calculator.clear();
     calculator.updateDisplay();
+    calculator.isLocked = false;
 }
 
 function handleDelete() {
@@ -154,6 +157,7 @@ function handleDelete() {
 function handleEquals() {
     calculator.compute();
     calculator.updateDisplay();
+    calculator.isLocked = true;
 }
 
 function handleNumberInput(input) {
@@ -164,10 +168,12 @@ function handleNumberInput(input) {
 function handleOperationInput(operation) {
     calculator.chooseOperation(operation);
     calculator.updateDisplay();
+    calculator.isLocked = false;
 }
 
 function handleScientificInput(func) {
     calculator.handleScientificFunction(func);
+    calculator.isLocked = false;
 }
 
 // Button Event Listeners
