@@ -275,7 +275,7 @@ input:checked+.slider:before {
     }
     
     .box__buttons button {
-        height: 55px;
+        height: auto;
     }
 
     .numberButton,
@@ -302,7 +302,7 @@ input:checked+.slider:before {
     }
 
     .box__buttons button {
-        height: 50px;
+        height: auto;
     }
 
     .numberButton,
