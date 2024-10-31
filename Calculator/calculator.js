@@ -239,16 +239,19 @@ document.addEventListener('keydown', (e) => {
 
 // Scientific toggle button listener
 const switchInput = document.querySelector('.box__switch input[type="checkbox"]');
+const calculatorBoxButton = document.querySelector('.box__buttons');
 const scientificContainer = document.querySelector('.box__buttons--scientific');
 const calculatorBox = document.querySelector('.calculator__box');
 
 function toggleScientificMode() {
     scientificContainer.classList.toggle('active', switchInput.checked);
 
-    if (switchInput.checked) {
-        calculatorBox.style.width = '700px';
-    } else {
+    if (!switchInput.checked) {
         calculatorBox.style.width = '366px';
+        calculatorBoxButton.style.justifyContent = 'center';
+    } else {
+        calculatorBox.style.width = '700px';
+        calculatorBoxButton.style.justifyContent = 'space-between';
     }
 }
 
