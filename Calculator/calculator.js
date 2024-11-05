@@ -247,11 +247,11 @@ function toggleScientificMode() {
     scientificContainer.classList.toggle('active', switchInput.checked);
 
     if (!switchInput.checked) {
-        calculatorBox.style.width = '366px';
-        calculatorBoxButton.style.justifyContent = 'center';
+        calculatorBox.style.width = '315px' || '100%';
+        box__buttonsScientific.style.display = 'none';
     } else {
-        calculatorBox.style.width = '700px';
-        calculatorBoxButton.style.justifyContent = 'space-between';
+        calculatorBox.style.width = '100%';
+        box__buttonsScientific.style.display = 'grid';
     }
 }
 

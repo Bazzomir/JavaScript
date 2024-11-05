@@ -27,8 +27,8 @@
 
 
 .calculator__box {
-    /* width: 100%; */
-    /* height: 100%; */
+    width: 315px;
+    height: 623px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -38,8 +38,8 @@
 }
 
 .box__screen {
-    /* width: 100%; */
-    height: 150px;
+    min-height: 150px;
+    height: 100%;
     border-radius: 13px;
     background-color: #80a7b0;
     box-shadow: 3px 5px 13px 0px rgba(88, 88, 88, 0.75);
@@ -72,7 +72,6 @@
 
 .screen__current-operand {
     font-size: 42px;
-    /* padding: 0 15px; */
     color: #dce6dd;
     text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.6);
     word-break: break-all;
@@ -81,7 +80,6 @@
 
 .screen__previous-operand {
     font-size: 33px;
-    /* padding: 0 15px; */
     color: #d6e0d7;
     text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.6);
 }
@@ -90,6 +88,7 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
+    gap: 15px;
     transition: justify-content 0.5s ease-in-out;
 }
 
@@ -101,18 +100,24 @@
 }
 
 .box__buttons--scientific {
+    display: none;
     max-width: 0;
     opacity: 0;
-    transition: max-width 0.5s ease, opacity 0.5s ease;
-    display: grid;
+    transition: max-width 0.5s ease-in-out, opacity 0.5s ease-in-out, display 0.5s ease-in-out;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    z-index: 1;
+    z-index: 1; */
 }
 
 .box__buttons--scientific.active {
     max-width: 100%;
     opacity: 1;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    z-index: 1;
 }
 
 .numberButton {
@@ -260,10 +265,10 @@ input:checked+.slider:before {
 
 @media (max-width: 768px) {
 
-    /* .calculator-container {
+    .calculator__box {
         width: 100%;
-        height: 100%;
-    } */
+        height: 500px;
+    }
 
     .screen__current-operand {
         font-size: 36px;
@@ -293,9 +298,12 @@ input:checked+.slider:before {
 @media (max-width: 480px) {
 
     .calculator-container {
-        /* width: 100%;
-        height: 100%; */
         overflow-y: scroll;
+    }
+
+    .calculator__box {
+        width: 100%;
+        height: 489px;
     }
 
     .screen__current-operand {
