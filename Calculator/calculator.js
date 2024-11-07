@@ -247,13 +247,10 @@ function toggleScientificMode() {
     scientificContainer.classList.toggle('active', switchInput.checked);
 
     if (!switchInput.checked) {
-        calculatorBox.style.width = '315px' || '100%';
         box__buttonsScientific.style.display = 'none';
     } else {
-        calculatorBox.style.width = '100%';
         box__buttonsScientific.style.display = 'grid';
     }
 }
 
 switchInput.addEventListener('change', toggleScientificMode);
-
