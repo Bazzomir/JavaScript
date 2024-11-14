@@ -3,20 +3,30 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ProjectWeather.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alkatra&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
   <title>Project Weather</title>
-  <p>Blagoj Jovanovski</p>
 </head>
 
 <body>
-  <div>
-    <input type="text" placeholder="Enter city name" class="input">
-    <button class="button"><b>Submit</b></button>
-  </div>
-  <div>
-    <div class="desc"></div>
-    <div class="temp"></div>
+  <div class="container">
+    <div class="input-container">
+      <input type="text" placeholder="Enter city name" class="input" />
+      <button class="button">Submit</button>
+    </div>
+
+    <div class="weather-display">
+      <div class="desc"></div>
+      <div class="temp"></div>
+    </div>
+
+    <script src="ProjectWeather.js"></script>
   </div>
 </body>
-<script src="ProjectWeather.js"></script>
 
 </html>

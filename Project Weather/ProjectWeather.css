@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alkatra", serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff7e5f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #ff6b47;
+}
+
+.weather-display {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.desc {
+  font-size: 1.2em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.temp {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 480px) {
+  .input-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .input,
+  .button {
+    font-size: 0.9em;
+  }
+
+  .temp {
+    font-size: 2em;
+  }
+}
