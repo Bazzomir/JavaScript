@@ -69,7 +69,12 @@ body {
   margin-bottom: 10px;
 }
 
-.temp {
+.temp,
+.aqi,
+.sunrise,
+.sunset,
+.timezone,
+.forecast-day {
   font-size: 2.5em;
   font-weight: bold;
   color: #ffffff;
