@@ -77,16 +77,28 @@ async function fetchWeatherData() {
       forecastContainer.appendChild(dayDiv);
     }
 
+    
+
   } catch (error) {
     console.error("Error fetching weather data:", error);
     alert("Wrong city name or there was an error! Please try again.");
   }
 }
 
+function toggleWeatherDisplay() {
+    let weatherDisplay = document.querySelector('.weather-display');
+    if (weatherDisplay.classList.contains('visible')) {
+      weatherDisplay.classList.remove('visible');
+    } else {
+      weatherDisplay.classList.add('visible');
+    }
+  }
+
 button.addEventListener('click', fetchWeatherData);
 input.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     fetchWeatherData();
+    toggleWeatherDisplay();
   }
 });
 
