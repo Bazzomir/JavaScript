@@ -10,7 +10,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* min-width: 100vw; */
   background: linear-gradient(to bottom right, #4facfe, #00f2fe);
   color: #333;
 }
@@ -20,7 +19,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
   width: 80%;
 }
 
@@ -32,7 +30,6 @@ body {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 
 .input {
   width: 100%;
@@ -86,13 +83,11 @@ body {
   opacity: 1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(2, 1fr); */
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   justify-content: center;
   align-items: center;
   animation: smooth-appear 1s ease forwards;
-
 }
 
 .temp {
@@ -164,19 +159,46 @@ body {
   column-span: all;
   align-content: center;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
 }
 
 .forecast-day {
-  font-size: 2.5em;
+  font-size: 2.2em;
   font-weight: bold;
   color: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.weather-container {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  cursor: pointer;
+}
 
-/* Media queries for responsiveness */
+.weather-container::after {
+  content: attr(data-description);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.weather-container:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
 @media (max-width: 480px) {
   .container {
     width: 100%;
