@@ -38,3 +38,11 @@ const findTheWords = () => {
 };
 
 console.log(findTheWords());
+
+
+//4. Using filter(), includes() and map() methods
+let stringArray = ["baba", "tabasco", "soba", "loba", "abracadabra"];
+
+const findAba = (words) =>
+  words.filter(word => word.includes("aba")).map(word => word.length);
+console.log("Length of strings containing \"aba\": " + findAba(stringArray));
