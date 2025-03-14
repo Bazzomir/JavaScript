@@ -118,22 +118,45 @@
 
 
 // lesson 7
-function handleTimeout() {
-    console.log("Timed out!");
+// function handleTimeout() {
+//     console.log("Timed out!");
+// }
+
+// const handleTimeout2 = () => {
+//     console.log("TImed out... again!");
+// };
+
+// setTimeout(handleTimeout, 2000);
+// setTimeout(handleTimeout2, 3000);
+// setTimeout(() => {
+//     console.log("More timing out...");
+// }, 4000);
+
+// function greeter(greetFn) {
+//     greetFn();
+// }
+
+// greeter(() => console.log("Hi!"));
+//-------------------------------------------
+
+
+
+// lesson 8
+function init() {
+    function greet() {
+        console.log('Hi!');
+    }
+
+    greet();
 }
 
-const handleTimeout2 = () => {
-    console.log("TImed out... again!");
-};
+init();
 
-setTimeout(handleTimeout, 2000);
-setTimeout(handleTimeout2, 3000);
-setTimeout(() => {
-    console.log("More timing out...");
-}, 4000);
-
-function greeter(greetFn) {
-    greetFn();
+const init2 = () => {
+    const greet2 = () => {
+        console.log("Hi! 2");
+    }
+    greet2();
 }
 
-greeter(() => console.log("Hi!"));
+setTimeout(() => { init2() }, 4000);
