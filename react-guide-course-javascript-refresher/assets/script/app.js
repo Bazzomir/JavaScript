@@ -51,7 +51,7 @@
 //-------------------------------------------
 
 // lesson 3
-const hobbies = ["Sports", "Cooking", "Reading"];
+// const hobbies = ["Sports", "Cooking", "Reading"];
 // console.log(hobbies[0]);
 
 // hobbies.push("Working");
@@ -111,7 +111,29 @@ const hobbies = ["Sports", "Cooking", "Reading"];
 //   console.log("Acces not granted");
 // }
 
-for (const hobby of hobbies) {
-    console.log(hobby);
-}
+// for (const hobby of hobbies) {
+//     console.log(hobby);
+// }
 //-------------------------------------------
+
+
+// lesson 7
+function handleTimeout() {
+    console.log("Timed out!");
+}
+
+const handleTimeout2 = () => {
+    console.log("TImed out... again!");
+};
+
+setTimeout(handleTimeout, 2000);
+setTimeout(handleTimeout2, 3000);
+setTimeout(() => {
+    console.log("More timing out...");
+}, 4000);
+
+function greeter(greetFn) {
+    greetFn();
+}
+
+greeter(() => console.log("Hi!"));
