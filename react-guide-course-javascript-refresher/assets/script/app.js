@@ -17,10 +17,10 @@
 //-------------------------------------------
 
 // lesson 2
-const user = {
-    name: "Max",
-    age: 34,
-};
+// const user = {
+//     name: "Max",
+//     age: 34,
+// };
 
 // const user = {
 //     name: "Max",
@@ -88,13 +88,30 @@ const hobbies = ["Sports", "Cooking", "Reading"];
 
 
 // lesson 5
-const newHobbies = ["Working"];
-const mergedHobbies = [...hobbies, ...newHobbies];
-console.log(mergedHobbies);
+// const newHobbies = ["Working"];
+// const mergedHobbies = [...hobbies, ...newHobbies];
+// console.log(mergedHobbies);
 
-const extendedUser = {
-  isAdmin: true,
-  ...user,
-};
+// const extendedUser = {
+//   isAdmin: true,
+//   ...user,
+// };
 
-console.log(extendedUser);
+// console.log(extendedUser);
+//-------------------------------------------
+
+
+// lesson 6
+// const password = prompt("Your password");
+// if (password === "Hello") {
+//   console.log("Hello works!");
+// } else if (password === "hello") {
+//   console.log("hello works.");
+// } else {
+//   console.log("Acces not granted");
+// }
+
+for (const hobby of hobbies) {
+    console.log(hobby);
+}
+//-------------------------------------------
