@@ -14,9 +14,14 @@
 // console.log(export1 + " and " + content2 + "..." + export3);
 // console.log(until);
 // console.log(greating);
-//
+//-------------------------------------------
 
 // lesson 2
+const user = {
+    name: "Max",
+    age: 34,
+};
+
 // const user = {
 //     name: "Max",
 //     age: 34,
@@ -46,7 +51,7 @@
 //-------------------------------------------
 
 // lesson 3
-// const hobbies = ["Sports", "Cooking", "Reading"];
+const hobbies = ["Sports", "Cooking", "Reading"];
 // console.log(hobbies[0]);
 
 // hobbies.push("Working");
@@ -64,7 +69,7 @@
 //-------------------------------------------
 
 // lesson 4
-// / const userNameData = ["Max", "Schwarzmuller"];
+//  const userNameData = ["Max", "Schwarzmuller"];
 // // const fristName = userNameData[0];
 // // const lastName = userNameData[1];
 // const [fristName, lastName] = ["Max", "Schwarzmuller", 34];
@@ -80,3 +85,16 @@
 // const name = user.name;
 // const age = user.age;
 //-------------------------------------------
+
+
+// lesson 5
+const newHobbies = ["Working"];
+const mergedHobbies = [...hobbies, ...newHobbies];
+console.log(mergedHobbies);
+
+const extendedUser = {
+  isAdmin: true,
+  ...user,
+};
+
+console.log(extendedUser);
