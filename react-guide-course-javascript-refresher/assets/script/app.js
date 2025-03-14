@@ -142,21 +142,22 @@
 
 
 // lesson 8
-function init() {
-    function greet() {
-        console.log('Hi!');
-    }
+// function init() {
+//     function greet() {
+//         console.log('Hi!');
+//     }
 
-    greet();
-}
+//     greet();
+// }
 
-init();
+// init();
 
-const init2 = () => {
-    const greet2 = () => {
-        console.log("Hi! 2");
-    }
-    greet2();
-}
+// const init2 = () => {
+//     const greet2 = () => {
+//         console.log("Hi! 2");
+//     }
+//     greet2();
+// }
 
-setTimeout(() => { init2() }, 4000);
+// setTimeout(() => { init2() }, 4000);
+//-------------------------------------------
