@@ -182,3 +182,8 @@
 // };
 
 // suma();
+
+
+let arr = [5, 4, 2, 1, 6, 0, 8, 3, 9];
+let array = arr.map((x) => x * 2);
+console.log(arr, array);
