@@ -161,3 +161,24 @@
 
 // setTimeout(() => { init2() }, 4000);
 //-------------------------------------------
+
+
+// lesson 9 - Notebook
+// let colors = ["red", "green", "blue"];
+// let lastColor = colors.pop();
+
+// console.log(colors.pop(), "cela niza");
+// console.log(lastColor, "posledna boja");
+
+// let a = 5;
+// let b = 3;
+// let suma = () => {
+//     return console.log(a >= b);
+//     return console.log(a <= b);
+//     return console.log(a !== b);
+//     return console.log(a != b);
+//     return console.log(a = !b);
+//     return console.log(a == !b);
+// };
+
+// suma();
