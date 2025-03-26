@@ -184,6 +184,34 @@
 // suma();
 
 
-let arr = [5, 4, 2, 1, 6, 0, 8, 3, 9];
-let array = arr.map((x) => x * 2);
-console.log(arr, array);
+// let arr = [5, 4, 2, 1, 6, 0, 8, 3, 9];
+// let array = arr.map((x) => x * 2);
+// console.log(arr, array);
+
+// const numbers = [10, 20, 30];
+// const [first, second, third] = numbers;
+// console.log(first);  // 10
+// console.log(second); // 20
+// console.log(third);  // 30
+
+// const numbers = [1, 2, 3, 4, 5];
+// const [first, , third] = numbers;
+// console.log(first); // 1
+// console.log(third); // 3
+
+// const numbers = [10, 20, 30, 40, 50];
+// const [first, second, ...rest] = numbers;
+// console.log(first);  // 10
+// console.log(second); // 20
+// console.log(rest);   // [30, 40, 50]
+
+// const person = {
+//     name: "Alice",
+//     age: 25,
+//     city: "New York"
+// };
+// const { name, age, city } = person;
+// console.log(name); // Alice
+// console.log(age);  // 25
+// console.log(city); // New York
+
