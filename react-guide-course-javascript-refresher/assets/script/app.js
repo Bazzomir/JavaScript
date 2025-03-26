@@ -273,12 +273,10 @@
 //   console.log("You are a minor.");
 // }
 
-
 // // Ternary operator (?:)
 // let age = 20;
 // let message = age >= 18 ? "Adult" : "Minor";
 // console.log(message); // Adult
-
 
 // // switch (for multiple conditions)
 // let day = "Monday";
@@ -292,7 +290,6 @@
 //   default:
 //     console.log("Just another day.");
 // }
-
 
 // // Loops (for, while, do-while)
 // for (let i = 0; i < 5; i++) {
@@ -311,7 +308,6 @@
 //     num--;
 // } while (num > 3);
 
-
 // // forEach, map, filter, reduce (modern array loops)
 // let numbers = [1, 2, 3];
 // numbers.forEach(num => console.log(num * 2)); // 2, 4, 6
@@ -325,7 +321,6 @@
 // let sum = numbers.reduce((acc, num) => acc + num, 0);
 // console.log(sum); // 6
 
-
 // // Error handling (try-catch)
 // try {
 //     let result = 10 / 0;
@@ -336,3 +331,30 @@
 // } catch (error) {
 //     console.log("An error occurred:", error.message);
 // }
+
+
+// // lesson 12 - Notebook: import-export
+// // export – Exporting values ​​from a module
+// import { add, subtract } from "./util.js";
+// console.log(add(5, 3)); // 8
+// console.log(subtract(10, 4)); // 6
+
+// export default – Basic (default) export
+// import greet from "./util.js";
+// console.log(greet("Alice")); // Hello, Alice!
+
+// // Import all values ​​from a module (import * as)
+// import * as MathFunctions from "./util.js";
+// console.log(MathFunctions.add(2, 3)); // 5
+// console.log(MathFunctions.subtract(7, 4)); // 3
+
+// // Re-export – Forwarding of exports
+// import { add, subtract, greet } from "./allFunctions.js";
+// console.log(add(4, 2)); // 6
+// console.log(greet("Bob")); // Hello, Bob!
+
+// // Dynamic import 
+// document.getElementById("loadModule").addEventListener("click", async () => {
+//     const module = await import("./util.js"); // Dynamic import
+//     console.log(module.add(5, 5)); // 10
+// });
