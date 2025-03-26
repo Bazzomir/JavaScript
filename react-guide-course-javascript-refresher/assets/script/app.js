@@ -188,16 +188,19 @@
 // let array = arr.map((x) => x * 2);
 // console.log(arr, array);
 
+
 // const numbers = [10, 20, 30];
 // const [first, second, third] = numbers;
 // console.log(first);  // 10
 // console.log(second); // 20
 // console.log(third);  // 30
 
+
 // const numbers = [1, 2, 3, 4, 5];
 // const [first, , third] = numbers;
 // console.log(first); // 1
 // console.log(third); // 3
+
 
 // const numbers = [10, 20, 30, 40, 50];
 // const [first, second, ...rest] = numbers;
@@ -205,13 +208,41 @@
 // console.log(second); // 20
 // console.log(rest);   // [30, 40, 50]
 
+
 // const person = {
 //     name: "Alice",
 //     age: 25,
 //     city: "New York"
 // };
+
+
 // const { name, age, city } = person;
 // console.log(name); // Alice
 // console.log(age);  // 25
 // console.log(city); // New York
 
+
+// const person = {
+//     fullName: "Bob Marley",
+//     age: 36
+// };
+
+
+// const { fullName: name, age: years } = person;
+// console.log(name);  // Bob Marley
+// console.log(years); // 36
+
+
+// const person = { name: "Charlie" };
+// const { name, age = 30 } = person;
+// console.log(name); // Charlie
+// console.log(age);  // 30 (бидејќи age не постои во `person`)
+
+
+// function greet({ name, age }) {
+//     return `Hello, ${name}! You are ${age} years old.`;
+// }
+
+// const user = { name: "David", age: 40 };
+
+// console.log(greet(user)); // Hello, David! You are 40 years old.
