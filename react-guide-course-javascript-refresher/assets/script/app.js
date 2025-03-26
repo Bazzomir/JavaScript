@@ -1,4 +1,4 @@
-// lesson 1
+// // lesson 1
 // import { export1, export2 as content2 } from "./util";
 // import export3 from "./util";
 // import * as until from "./util"; // kreira object od se
@@ -16,7 +16,7 @@
 // console.log(greating);
 //-------------------------------------------
 
-// lesson 2
+// // lesson 2
 // const user = {
 //     name: "Max",
 //     age: 34,
@@ -50,7 +50,7 @@
 // user1.greet();
 //-------------------------------------------
 
-// lesson 3
+// // lesson 3
 // const hobbies = ["Sports", "Cooking", "Reading"];
 // console.log(hobbies[0]);
 
@@ -68,7 +68,7 @@
 // console.log(editedHobbies, editedHobbies2);
 //-------------------------------------------
 
-// lesson 4
+// // lesson 4
 //  const userNameData = ["Max", "Schwarzmuller"];
 // // const fristName = userNameData[0];
 // // const lastName = userNameData[1];
@@ -87,7 +87,7 @@
 //-------------------------------------------
 
 
-// lesson 5
+// // lesson 5
 // const newHobbies = ["Working"];
 // const mergedHobbies = [...hobbies, ...newHobbies];
 // console.log(mergedHobbies);
@@ -101,7 +101,7 @@
 //-------------------------------------------
 
 
-// lesson 6
+// // lesson 6
 // const password = prompt("Your password");
 // if (password === "Hello") {
 //   console.log("Hello works!");
@@ -117,7 +117,7 @@
 //-------------------------------------------
 
 
-// lesson 7
+// // lesson 7
 // function handleTimeout() {
 //     console.log("Timed out!");
 // }
@@ -140,8 +140,7 @@
 //-------------------------------------------
 
 
-
-// lesson 8
+// // lesson 8
 // function init() {
 //     function greet() {
 //         console.log('Hi!');
@@ -163,7 +162,7 @@
 //-------------------------------------------
 
 
-// lesson 9 - Notebook
+// // lesson 9 - Notebook
 // let colors = ["red", "green", "blue"];
 // let lastColor = colors.pop();
 
@@ -180,69 +179,86 @@
 //     return console.log(a = !b);
 //     return console.log(a == !b);
 // };
-
 // suma();
-
 
 // let arr = [5, 4, 2, 1, 6, 0, 8, 3, 9];
 // let array = arr.map((x) => x * 2);
 // console.log(arr, array);
+//-------------------------------------------
 
 
+// // lesson 10 - Notebook: Destructuring
+// // Destructuring Arrays
 // const numbers = [10, 20, 30];
 // const [first, second, third] = numbers;
 // console.log(first);  // 10
 // console.log(second); // 20
 // console.log(third);  // 30
 
-
+// // Skipping elements in arrays
 // const numbers = [1, 2, 3, 4, 5];
 // const [first, , third] = numbers;
 // console.log(first); // 1
 // console.log(third); // 3
 
-
+// // Destructuring with remaining (...rest) elements
 // const numbers = [10, 20, 30, 40, 50];
 // const [first, second, ...rest] = numbers;
 // console.log(first);  // 10
 // console.log(second); // 20
 // console.log(rest);   // [30, 40, 50]
 
-
+// // Destructuring of objects
 // const person = {
 //     name: "Alice",
 //     age: 25,
 //     city: "New York"
 // };
-
-
 // const { name, age, city } = person;
 // console.log(name); // Alice
 // console.log(age);  // 25
 // console.log(city); // New York
 
-
+// // Renaming values
 // const person = {
 //     fullName: "Bob Marley",
 //     age: 36
 // };
-
-
 // const { fullName: name, age: years } = person;
 // console.log(name);  // Bob Marley
 // console.log(years); // 36
 
-
+// // Default values ​​during Destructuring
 // const person = { name: "Charlie" };
 // const { name, age = 30 } = person;
 // console.log(name); // Charlie
 // console.log(age);  // 30 (бидејќи age не постои во `person`)
 
-
+// Destructuring in functions
 // function greet({ name, age }) {
 //     return `Hello, ${name}! You are ${age} years old.`;
 // }
-
 // const user = { name: "David", age: 40 };
-
 // console.log(greet(user)); // Hello, David! You are 40 years old.
+
+// // Destructuring Nested Objects
+// const user = {
+//     name: "Eve",
+//     address: {
+//         city: "Paris",
+//         country: "France"
+//     }
+// };
+// const { address: { city, country } } = user;
+// console.log(city);    // Paris
+// console.log(country); // France
+
+// // Destructuring in a for-of loop
+// const users = [
+//     { name: "Anna", age: 28 },
+//     { name: "Brian", age: 32 }
+// ];
+// for (const { name, age } of users) {
+//     console.log(`${name} is ${age} years old.`);
+// }
+//-------------------------------------------
