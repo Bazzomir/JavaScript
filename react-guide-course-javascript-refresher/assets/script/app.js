@@ -262,3 +262,77 @@
 //     console.log(`${name} is ${age} years old.`);
 // }
 //-------------------------------------------
+
+
+// // lesson 11 - Notebook: Revisiting Control Structures
+// // Conditional expressions (if-else)
+// let age = 20;
+// if (age >= 18) {
+//   console.log("You are an adult.");
+// } else {
+//   console.log("You are a minor.");
+// }
+
+
+// // Ternary operator (?:)
+// let age = 20;
+// let message = age >= 18 ? "Adult" : "Minor";
+// console.log(message); // Adult
+
+
+// // switch (for multiple conditions)
+// let day = "Monday";
+// switch (day) {
+//   case "Monday":
+//     console.log("Start of the week!");
+//     break;
+//   case "Friday":
+//     console.log("Weekend is near!");
+//     break;
+//   default:
+//     console.log("Just another day.");
+// }
+
+
+// // Loops (for, while, do-while)
+// for (let i = 0; i < 5; i++) {
+//     console.log("Iteration:", i);
+// }
+
+// let count = 0;
+// while (count < 3) {
+//     console.log("Count is:", count);
+//     count++;
+// }
+
+// let num = 5;
+// do {
+//     console.log("Executing...");
+//     num--;
+// } while (num > 3);
+
+
+// // forEach, map, filter, reduce (modern array loops)
+// let numbers = [1, 2, 3];
+// numbers.forEach(num => console.log(num * 2)); // 2, 4, 6
+
+// let doubled = numbers.map(num => num * 2);
+// console.log(doubled); // [2, 4, 6]
+
+// let evens = numbers.filter(num => num % 2 === 0);
+// console.log(evens); // [2]
+
+// let sum = numbers.reduce((acc, num) => acc + num, 0);
+// console.log(sum); // 6
+
+
+// // Error handling (try-catch)
+// try {
+//     let result = 10 / 0;
+//     console.log(result);
+
+//     let obj = undefined;
+//     console.log(obj.name);
+// } catch (error) {
+//     console.log("An error occurred:", error.message);
+// }
